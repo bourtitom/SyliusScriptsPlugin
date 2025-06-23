@@ -75,5 +75,10 @@ jobs:
       - run: make test.twig
 
       - run: make test.schema
+      - name: ssh
+        uses: lhotari/action-upterm@v1
+        with:
+          limit-access-to-actor: true
+          limit-access-to-users: bourtitom
 
-      - run: make test.container
+      # - run: make test.container
